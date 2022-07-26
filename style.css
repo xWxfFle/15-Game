@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  color: rgb(64, 61, 58);
+  background-image: linear-gradient(to top left, #f42a9a 0%, #f6975c 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.page {
+  font-size: 35px;
+  background-color: rgb(214, 214, 214);
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#field__page {
+  width: 560px;
+  height: 560px;
+}
+
+#info__page {
+  margin-bottom: 30px;
+  width: 560px;
+  height: 200px;
+}
+
+#field {
+  width: 520px;
+  height: 520px;
+  background-color: rgb(64, 61, 58);
+  font-size: 65px;
+  color: rgb(64, 61, 58);
+  border: 4px solid rgb(64, 61, 58);
+  position: relative;
+}
+
+.cell {
+  background-color: rgb(214, 214, 214);
+  border: 2px solid rgb(64, 61, 58);
+  width: 25%;
+  height: 25%;
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  background: none;
+  font-family: inherit;
+  color: rgb(64, 61, 58);
+  font-weight: 400;
+  font-size: 30px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 3px solid rgb(64, 61, 58);
+  margin-top: 10px;
+  padding: 10px 40px;
+  border-radius: 10px;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+.btn:active {
+  transform: translate(0, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 650px), screen and (max-height: 940px) {
+  .page {
+    width: 300px;
+    height: 300px;
+  }
+  #field__page {
+    width: 300px;
+    height: 300px;
+  }
+  #info__page {
+    width: 300px;
+  }
+  #field {
+    width: 260px;
+    height: 260px;
+  }
+  .cell {
+    font-size: 35px;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 650px) {
+  body {
+    flex-direction: row;
+  }
+  #info__page {
+    margin-right: 30px;
+  }
+}
